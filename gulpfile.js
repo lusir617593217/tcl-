@@ -89,10 +89,17 @@ var serverHandler = function(){
              .pipe(webserver({
                host: "localhost",
                port: 3000,   // 端口号
-              //  open: "./html/index.html",  // 默认的打开页
+               open: "http://localhost:3000/pages/index.html",  // 默认的打开页
                livereload: true,  // 自动刷新页面
                proxies: [  // 可以配置代理服务器
-                
+                {
+                  source: '/login',
+                  target: 'http://localhost:80/tcl/login.php'
+                },
+                {
+                  source: '/register',
+                  target: 'http://localhost:80/tcl/register.php'
+                }
                ]
              }))
 } 
