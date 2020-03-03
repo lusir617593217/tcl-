@@ -50,14 +50,16 @@ ul, ol, li{
      float: right;
      width: 330px;
      li{
-      height: 40px;
-      line-height: 40px;;
-      color: #ccc;
-      font-size: 10px;
       display: inline-block;
-      margin: 0 18px;
+      a{
+       margin: 0 18px;
+       height: 40px;
+       line-height: 40px;;
+       color: #ccc;
+       font-size: 10px;
+      }
     }
-    li:hover{
+    li:hover a{
       color: #fff;
       cursor: pointer;
     }
@@ -170,73 +172,185 @@ ul, ol, li{
   }
   .no-empty{
     width: 100%;
-    background-color: #e3e3e3;
-    height: 100px;
-    overflow: hidden;
     color: #666;
     .topPly{
-      padding: 30px 0;
-      width: 1226px;
-      overflow: hidden;
-      height: 40px;
-      margin: 0 auto;
-      position: relative;
-      input{
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        left: 0;
-        top: 25px;
-      }
-      li{
-        float: left;
-        font-size: 14px;
-        font-weight: 700;
-        color: #333;
-        text-align: center;
-        width: 140px;
+      background-color: #e3e3e3;
+      height: 100px;
+      .topPly-w{
+        width: 1226px;
+        margin: 0 auto;
+        padding: 30px 0;
+        // overflow: hidden;
         height: 40px;
-        line-height: 40px;
-        &:nth-child(2){
-          width: 130px;
+        position: relative;
+        input{
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          left: 0;
+          top: 35px;
         }
-        &:nth-child(3){
-          width: 610px;
-        }
-        &:nth-child(4){
-          width: 100px;
-        }
-        &:nth-child(5){
-          width: 170px;
-        }
-        &:last-child{
-          width: 70px;
+        li{
+          float: left;
+          font-size: 14px;
+          font-weight: 700;
+          color: #333;
+          text-align: center;
+          width: 140px;
+          height: 40px;
+          line-height: 40px;
+          &:nth-child(2){
+            width: 130px;
+          }
+          &:nth-child(3){
+            width: 610px;
+          }
+          &:nth-child(4){
+            width: 100px;
+          }
+          &:nth-child(5){
+            width: 170px;
+          }
+          &:last-child{
+            width: 70px;
+          }
         }
       }
-
+      
     }
+    // 商品
     .product{
       width: 1226px;
       margin: 0 auto;
-      padding-top: 46px;
+      font-size: 16px;
+      color: #555;
       > li{
+        border-bottom: 1px solid #ccc;
+        padding: 46px 0;
         input{
           width: 20px;
           height: 20px;
+          margin-right: 110px;
         }
         img{
           display: inline-block;
+          width: 120px;
+          height: 120px;
+        }
+        .message{
+          width: 320px;
+          margin: 0 90px;;
         }
         span{
           display: inline-block;
+          font-size: 16px;
+        }
+        .count{
+          margin: 0 40px;
+          button{
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+            background-color: #e3e3e3;
+            cursor: pointer;
+            outline: none;
+          }
+          span{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;        
+          }
+        }
+        .price{
+          color: red;
+          width: 140px;
+          text-align: center;
+          // font-weight: 700;
         }
         p{
           display: inline-block;
+        }
+        .font{
+          width: 65px;
+          text-align: center;
+          i{
+            font-size: 16px;
+            cursor: pointer;
+            color: #555;
+            &:hover{
+              color: red;
+            }
+          }
         }
 
       }
 
       
+    }
+    // 结算
+    .account{
+      width: 1226px;
+      margin: 0 auto;
+      margin-top: 30px;
+      margin-bottom: 142px;
+      overflow: hidden;
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+      position: relative;
+      > a{
+        float: left;
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        color: #333;
+        font-size: 14px;
+      }
+      > ul{
+        float: right;
+        height: 50px;
+        > li{
+          float: left;
+          color: #666;
+          height: 50px;
+          line-height: 50px;
+          margin-right: 42px;
+          font-size: 14px;
+          &:nth-child(3){
+            color: red;
+            span{
+              font-size: 26px;
+            }
+          }
+          &:nth-child(4){
+            color: #FFF;
+            font-size: 16px;
+            width: 230px;
+            margin: 0;
+            text-align: center;
+            background-color: #ccc;
+            cursor: pointer;
+            button{
+              width: 100%;
+              height: 100%;
+              background-color: #ccc;
+              outline: 0;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+    .account-active{
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 0;
+      background: #fff;
+      opacity: 1;
+      z-index: 9999;
+
     }
 
   }

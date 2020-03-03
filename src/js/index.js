@@ -5,12 +5,11 @@ $('.carousel').carousel({
 
 // 回到顶部
 $("#backTop > .two").click(function(){
-  // $(window).animate({'scrollTop': 0},1000);
   $('html').stop().animate({scrollTop: 0},1000)
 })
 
 $(window).scroll(function(){
-  if($(this).scrollTop() >= 800){
+  if($(this).scrollTop() >= 200){
     $('#backTop').show();
   }else{
     $('#backTop').hide();
@@ -78,7 +77,6 @@ function navTop(){
     url: "../lib/nav-top.json",
     dataType: "json",
     success: function(res){
-      console.log(res)
       res.forEach(function(item){
         str1 += ` <li>${item.title}</li> `
       })
@@ -87,12 +85,13 @@ function navTop(){
       $('.nav-left > .one').siblings().mouseenter(function(){
         var index = $(this).index();
         var list = res[index-1].list;
-        console.log(list)
         var str2 = "";
         list.forEach(item => {
           str2 += `
           <li>
-            <img src="${item.list_url}" alt="">
+            <a href="../pages/details.html">
+              <img src="${item.list_url}" alt="">
+            </a>
             <p>${item.list_title}</p>
             <span>${item.list_price}</span>
           </li>
@@ -105,10 +104,10 @@ function navTop(){
         $('.nav-hide').stop().slideUp()
       })
       $('.nav-hide').mouseenter(function(){
-        this.style.display = "block";
+        $(this).stop().slideDown()
       })
       $('.nav-hide').mouseleave(function(){
-        this.style.display = "none";
+        $(this).stop().slideUp()
       })
     }
   })

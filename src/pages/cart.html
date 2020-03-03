@@ -20,15 +20,15 @@
       </ul>
       <ul class="top-right">
         <li class="wechat-app">
-          微信商城
+          <a href="#">微信商城</a>
           <div class="wechat-code">
             <img src="../images/wechat-code.jpg" alt="">
             <p class="text">关注公众号<br>一键下单购买</p>
           </div>
         </li><b></b>
-        <li>购物车（<span>0</span>）</li><b></b>
-        <li>注册</li><b></b>
-        <li>登录</li>
+        <li><a href="#">购物车（<span>0</span>）</a></li><b></b>
+        <li><a href="./register.html">注册</a></li><b></b>
+        <li><a href="./login.html">登录</a></li>
       </ul>
     </div>
   </div>
@@ -53,6 +53,7 @@
     <!-- 购物车不为空时显示 -->
     <div class="no-empty">
       <div class="topPly">
+       <div class="topPly-w">
         <input type="checkbox"> 
         <li>全选</li>
         <li>商品信息</li>
@@ -60,27 +61,38 @@
         <li>数量</li>
         <li>小计</li>
         <li>操作</li>
+       </div>
       </div>
       <ul class="product">
         <li>
           <input type="checkbox">
-          <img src="" alt="图片">
-          <span>爱死机好尬比</span>
+          <img src="http://img.mall.tcl.com/dev1/0/000/694/0000694138.fid" alt="图片">
+          <span class="message">爱死机好尬比</span>
           <span>3000.00元</span>
-          <p>
+          <p class="count">
             <button>-</button>
             <span>0</span>
             <button>+</button>
           </p>
-          <span>3000.00元</span>
-          <p>
+          <span class="price">3000.00元</span>
+          <p class="font">
             <i class="glyphicon glyphicon-star"></i>
             <i class="glyphicon glyphicon-trash"></i>
           </p>
-        
-
         </li>
       </ul>
+      <!-- 结算 -->
+      <div class="account">
+        <a href="../pages/index.html">继续购物 >></a>
+        <ul>
+          <li>共<span>0</span>商品 已选择<span>0</span>件</li>
+          <li>合计 （不含运费）：</li>
+          <li><span>0.00</span>元</li>
+          <li><button>去结算</button></li>
+        </ul>
+        
+      </div>
+
     </div>
   </div>
   <!-- help -->
@@ -163,4 +175,6 @@
     </div>
   </div>
 </body>
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<script src="../js/cart.js"></script>
 </html>

@@ -1,11 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../sass/list.css">
 </head>
+
 <body>
+  <!-- top -->
+  <div id="top">
+    <div class="top-w">
+      <ul class="top-left">
+        <li>TCL新闻</li>
+        <li>企业采购</li>
+        <li>经销商之家</li>
+        <li>TCL会员中心</li>
+        <li>人才招聘</li>
+      </ul>
+      <ul class="top-right">
+        <li class="wechat-app">
+          <a href="#">微信商城</a>
+          <div class="wechat-code">
+            <img src="../images/wechat-code.jpg" alt="">
+            <p class="text">关注公众号<br>一键下单购买</p>
+          </div>
+        </li><b></b>
+        <li><a href="./cart.html">购物车（<span>0</span>）</a></li><b></b>
+        <li><a href="./register.html">注册</a></li><b></b>
+        <li><a href="./login.html">登录</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- nav -->
+  <div id="nav">
+    <div class="nav-w w">
+      <img src="../images/logo.png" alt="">
+      <ul class="nav-left">
+        <li class="one"><a href="../pages/index.html">首页</a></li>
+      </ul>
+      <ul class="nav-right">
+        <a href="#">服务</a>
+        <a href="#">视屏教程</a>
+        <a href="#">XESS门店</a>
+        <div class="search">
+          <input type="text" placeholder="领券立减">
+          <span><i class="glyphicon glyphicon-search"></i></span>
+        </div>
+      </ul>
+    </div>
+    <!-- hide -->
+    <div class="nav-hide"></div>
+  </div>
+  <!-- main -->
+  <div id="main">
+    <div class="search">
+      搜索：<b>AI</b>共<span>70</span>个商品
+    </div>
+    <div class="price">
+      <b>价格</b>
+      <input type="text" placeholder="￥">
+      -
+      <input type="text" placeholder="￥">
+      <button>确定</button>
+    </div>
+    <div class="sort">
+      <a href="#">综合排序</a>
+      <a href="#">销量  ↑</a>
+      <a href="#">价格  ↑</a>
+    </div>
+    <!-- 商品列表 -->
+    <ul class="list-box">
+      <li>
+        <div class="pic">
+          <img src="http://img.mall.tcl.com/dev1/0/000/730/0000730465.fid" alt="">
+        </div>
+        <div class="text">
+          <strong>
+            43英寸全场景
+            <span style="color:red">AI</span>
+            电视
+          </strong>
+          <p>
+            TCL 43D10 43英寸全场景
+            <span style="color:red">AI</span>
+            电视，无边款全面屏，远场语音，Q引擎画质，健康护眼，四维场景优化，精锐色域控制，2GB+8GB
+          </p>
+          <b>2399元</b>
+          <button>立即购买</button>
+        </div>
+      </li>
+      <li>
+        <div class="pic">
+          <img src="http://img.mall.tcl.com/dev1/0/000/730/0000730465.fid" alt="">
+        </div>
+        <div class="text">
+          <strong>
+            43英寸全场景
+            <span style="color:red">AI</span>
+            电视
+          </strong>
+          <p>
+            TCL 43D10 43英寸全场景
+            <span style="color:red">AI</span>
+            电视，无边款全面屏，远场语音，Q引擎画质，健康护眼，四维场景优化，精锐色域控制，2GB+8GB
+          </p>
+          <b>2399元</b>
+          <button>立即购买</button>
+        </div>
+      </li>
+      <li>
+        <div class="pic">
+          <img src="http://img.mall.tcl.com/dev1/0/000/730/0000730465.fid" alt="">
+        </div>
+        <div class="text">
+          <strong>
+            43英寸全场景
+            <span style="color:red">AI</span>
+            电视
+          </strong>
+          <p>
+            TCL 43D10 43英寸全场景
+            <span style="color:red">AI</span>
+            电视，无边款全面屏，远场语音，Q引擎画质，健康护眼，四维场景优化，精锐色域控制，2GB+8GB
+          </p>
+          <b>2399元</b>
+          <button>立即购买</button>
+        </div>
+      </li>
+      <li>
+        <div class="pic">
+          <img src="http://img.mall.tcl.com/dev1/0/000/730/0000730465.fid" alt="">
+        </div>
+        <div class="text">
+          <strong>
+            43英寸全场景
+            <span style="color:red">AI</span>
+            电视
+          </strong>
+          <p>
+            TCL 43D10 43英寸全场景
+            <span style="color:red">AI</span>
+            电视，无边款全面屏，远场语音，Q引擎画质，健康护眼，四维场景优化，精锐色域控制，2GB+8GB
+          </p>
+          <b>2399元</b>
+          <button>立即购买</button>
+        </div>
+      </li>
+    </ul>
+    <!-- 分页 -->
+    <div class="paging">
+        <ul class="paging-r">
+          <li> <a href="#" class="prev">&lt;</a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#" class="next">&gt;</a></li>
+        </ul>
+    </div>
+  </div>
+ 
   
+  <!-- help -->
+  <div id="help">
+    <div class="w help-w">
+      <ul>
+        <li>帮助中心</li>
+        <li>购物指南</li>
+        <li>支付方式</li>
+        <li>配送方式</li>
+        <li>交易条款</li>
+        <li>电子发票</li>
+      </ul>
+      <ul>
+        <li>服务支持</li>
+        <li>售后服务</li>
+        <li>自助服务</li>
+        <li>进度查询</li>
+        <li>视频教程</li>
+      </ul>
+      <ul>
+        <li>客服平台</li>
+        <li>企业采购</li>
+        <li>经销商之家</li>
+        <li>十分到家</li>
+      </ul>
+      <ul>
+        <li>关注我们</li>
+        <li>联系我们</li>
+        <li>官方微博</li>
+      </ul>
+      <ul>
+        <li>应用服务</li>
+        <li>雷鸟</li>
+        <li>欢网</li>
+        <li>金融</li>
+        <li>教育</li>
+        <li>全球播</li>
+      </ul>
+      <ul>
+        <li>TCL官网商城</li>
+        <img src="../images/wechat.jpg" alt="">
+      </ul>
+      <ul>
+        <h3>4008-123456</h3>
+        <p>（24小时在线，仅收市话费）</p>
+        <a href="#"><i class="glyphicon glyphicon-headphones"></i>24小时在线客服</a>
+      </ul>
+    </div>
+  </div>
+  <!-- footer -->
+  <div id="footer">
+    <div class="w">
+      <p>
+        <a href="#">关于TCL</a>|
+        <a href="#">投资者关系</a>|
+        <a href="#">社会责任</a>|
+        <a href="#">新闻中心</a>|
+        <a href="#">人才招聘</a>|
+        <a href="#">成员网站</a>
+      </p>
+      <p class="ban">©2010-2019 TCL CORPORATION All Rights Reserved. TCL集团股份有限公司版权所有 粤ICP备05040863号
+        <a href="#">使用条款</a>|
+        <a href="#">法律声明</a>|
+        <a href="#">隐私政策</a>|
+        <a href="#">账户注册协议</a>|
+        <a href="#">侵权投诉规则</a>
+      </p>
+      <p class="p">
+        <img src="../images/beian.png" alt="">
+        粤网公安备案44133002100088号</p>
+        <div class="f">
+          <img src="../images/foot01.jpg" alt="">
+          <img src="../images/foot02.png" alt="">
+        </div>
+        <div class="foot-r">
+          <a href="#">简体中文</a>|
+          <a href="#">English</a>
+        </div>
+    </div>
+  </div>
+  <!-- backTop -->
+  <div id="backTop">
+    <a href="#" class="one">
+      <i class="glyphicon glyphicon-headphones"></i>
+      <span>客服</span>
+    </a>
+    <a href="#" class="two">
+      <i class="glyphicon glyphicon-menu-up"></i>
+      <span>顶部</span>
+    </a>
+  </div>
+
 </body>
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../js/index.js"></script>
+
 </html>

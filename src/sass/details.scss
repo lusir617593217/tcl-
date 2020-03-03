@@ -1,0 +1,228 @@
+// detail
+.detail{
+  overflow: hidden;
+  background-color: #fff;
+  width: 100%;
+  .title{
+    height: 50px;
+    line-height: 50px;
+    background: #f0f0f0;
+    .title-w{
+      width: 1226px;
+      margin: 0 auto;
+      color: #666;
+      font-size: 16px;
+      a{
+        display: inline-block;
+        color: #555;
+        outline: 0;
+      }
+    }
+    
+  }
+  .content{
+    width: 980px;
+    min-height: 620px;
+    margin: 60px auto;
+    position: relative;
+    .content-left{
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      top: 50px;
+      left: 30px;
+      cursor: pointer;
+      img{
+        border: 1px solid #ccc;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+    .content-right{
+      width: 400px;
+      height: 600px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      h2{
+        font-size: 30px;
+        color: #333;
+        line-height: 30px;
+        padding-bottom: 20px;
+        overflow: hidden;
+      }
+      p{
+        width: 80%;
+        color: #999;
+        font-size: 12px;
+        line-height: 19px;
+        a{
+          color: red;
+        }
+      }
+      .price{
+        position: relative;
+        padding: 22px 0;
+        font-size: 14px;
+        color: #333;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        > span{
+          display: inline-block;
+          b{
+            font-size: 24px;
+            color: red;
+            font-weight: 400;
+          }
+          &:nth-child(2){
+            margin-right: 40px;
+          }
+          &:nth-child(3){
+            font-size: 13px;
+            margin-right: 10px;
+            color: #666;
+            text-decoration: line-through;
+          }
+          &:nth-child(4){
+            float: right;
+            font-size: 13px;
+            color: #666;
+            margin-top: 10px;
+            margin-right: 10px;
+          }
+        }
+        img{
+          width: 14px;
+          height: 14px;
+          display: block;
+          margin-top: 12px;
+          margin-right: 5px;
+          float: right;
+        }
+        .code{
+          position: absolute;
+          right: -20px;
+          top: 50px;
+          background-color: #FFF;
+          z-index: 200;
+          border: 1px solid #ccc;
+          display: none;
+          width: 170px;
+          img{
+            width: 127px;
+            height: 127px;
+            position: absolute;
+            left: 20px;
+          }
+          p{
+            width: 100%;
+            font-size: 14px;
+            color: #666;
+            margin-top: 150px;
+            text-align: center;
+          }
+        }
+        
+         
+      }
+      .series{
+        border-bottom: 1px solid #ccc;
+        padding: 22px 0;
+        p{
+          font-size: 14px;
+          color: #333;
+        }
+        .span{
+          margin-top: 20px;
+          span{
+            width: 28%;
+            margin: 10px 8px 0 0;
+            overflow: hidden;
+            padding: 0 15px;
+            line-height: 64px;
+            text-align: center;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            color: #666;
+            display: inline-block;
+            height: 64px;
+            cursor: pointer;
+            &.active{
+              border-color: red;
+              color: red;
+            }
+          }
+        }
+      }
+      .buy{
+        border-bottom: 1px solid #ccc;
+        padding: 22px 0;
+        .buy-left{
+          margin-right: 5px;
+          width: 90px;
+          height: 64px;
+          display: inline-block;
+          border: 1px solid #ccc;
+          overflow: hidden;
+          position: relative;
+          span{
+            display: inline-block;
+            width: 56px;
+            height: 64px;
+            font-size: 18px;
+            color: #666;
+            text-align: center;
+            line-height: 64px;
+            border-right: 1px solid #ccc;;
+          }
+          b{
+            width: 32px;
+            height: 20px;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+            font-weight: 400;
+            color: #666;
+            position: absolute;
+            top: 14px;
+            right: 0;  
+            &.two{
+              top: 34px;
+            }        
+          }
+        }
+        .buy-center{
+          background-color: red;
+          height: 64px;
+          width: 136px;
+          line-height: 64px;
+          font-size: 18px;
+          text-align: center;
+          color: #FFF;
+          display: inline-block;
+          vertical-align: top;
+          border: 1px solid red;
+          cursor: pointer;
+          margin-left: 5px;
+          outline: 0;
+        }
+        .buy-right{
+          width: 136px;
+          background-color: #fff;
+          color: red;
+          height: 64px;
+          display: inline-block;
+          vertical-align: top;
+          line-height: 64px;
+          font-size: 18px;
+          margin-left: 10px;
+          text-align: center;
+          border: 1px solid red;
+          cursor: pointer;
+          outline: 0;
+        }
+      }
+    }
+  }
+}
