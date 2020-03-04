@@ -3,6 +3,8 @@ $("#exzoom").exzoom({
   autoPlay: false,
 });//方法调用，务必在加载完后执行
 
+
+
 // 渲染 nav-top
 $(function(){
   navTop()
@@ -26,9 +28,7 @@ function navTop(){
         list.forEach(item => {
           str2 += `
           <li>
-            <a href="../pages/details.html">
-              <img src="${item.list_url}" alt="">
-            </a>
+            <img src="${item.list_url}" alt="">
             <p>${item.list_title}</p>
             <span>${item.list_price}</span>
           </li>
@@ -49,12 +49,21 @@ function navTop(){
     }
   })
 }
+// 给 nav-hide 里的每一个 li 添加点击事件
+$('.nav-hide').on('click','li',function(){
+  var goods = {
+    'url': $(this).children('img').attr('src'),
+    'title': $(this).children('p').text(),
+    'price':  $(this).children('span').text()
+  }
+  localStorage.setItem('goods_info',JSON.stringify(goods))
+  window.location.href = '../pages/details.html'
+})
 
 // 回到顶部
 $("#backTop > .two").click(function(){
   $('html').stop().animate({scrollTop: 0},1000)
 })
-
 $(window).scroll(function(){
   if($(this).scrollTop() >= 200){
     $('#backTop').show();
@@ -101,4 +110,32 @@ $('.buy-left .one')
   })
   .mouseleave(function(){
     $(this).hide()
+  })
+
+  // 渲染页面
+  bind()
+  function bind(){
+    var list = JSON.parse(localStorage.getItem('goods_info')) 
+    $('.address').attr('src', list.url)
+    $('.content-right > .title').text(list.title)
+    $('.title_span').text(list.title)
+    $('.now_price').text(list.price)
+  }
+
+  // 加入购物车
+  var cart = JSON.parse(localStorage.getItem('cart')) || []
+  $('.buy-right').click(function(){
+    var imgUrl = $('.address').attr('src')
+    var title = $('.content-right > .title').text()
+    var now_price = $('.now_price').text()
+    var count = $('.count').text()
+    var obj = {
+      "url": imgUrl,
+      "title": title,
+      "price": now_price,
+      "count": count
+    }
+    cart.push(obj)
+    localStorage.setItem('cart', JSON.stringify(cart))
+    alert("添加成功")
   })

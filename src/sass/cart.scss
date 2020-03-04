@@ -134,9 +134,9 @@ ul, ol, li{
   overflow: hidden;
   .main-w{
     width: 980px;
+    display: none;
     margin: 0 auto;
     .empty{
-      display: none;
       img{
         float: left;
         margin-left: 70px;
@@ -238,12 +238,14 @@ ul, ol, li{
           height: 120px;
         }
         .message{
-          width: 320px;
-          margin: 0 90px;;
+          width: 340px;
+          margin: 0 76px;;
         }
         span{
           display: inline-block;
           font-size: 16px;
+          width: 80px;
+          text-align: center;
         }
         .count{
           margin: 0 40px;
@@ -264,9 +266,8 @@ ul, ol, li{
         }
         .price{
           color: red;
-          width: 140px;
+          width: 130px;
           text-align: center;
-          // font-weight: 700;
         }
         p{
           display: inline-block;
@@ -337,11 +338,15 @@ ul, ol, li{
               outline: 0;
               border: none;
             }
+            .active{
+              background-color: red;
+              border: 1px solid red;
+            }
           }
         }
       }
     }
-    .account-active{
+    .account.active{
       position: fixed;
       bottom: 0;
       left: 50%;
@@ -350,9 +355,7 @@ ul, ol, li{
       background: #fff;
       opacity: 1;
       z-index: 9999;
-
     }
-
   }
 }
 

@@ -1,0 +1,44 @@
+[
+  {
+    "url": "http://localhost:3000/images/pic01.png",
+    "sm_url": "http://localhost:3000/images/s01.png",
+    "title": "TCL 75V2 75英寸AI超智慧巨幕4K电视",
+    "info": "TCL 75V2 75英寸大屏/95.9%屏占比/AI人工智能语音",
+    "price": "4399.00 元"
+  },
+  {
+    "url": "http://localhost:3000/images/pic02.png",
+    "sm_url": "http://localhost:3000/images/s02.png",
+    "title": "65Q6 65英寸超薄全场景AI电视",
+    "info": "TCL 75V2 75英寸大屏/95.9%屏占比/AI人工智能语音",
+    "price": "4199.00 元"
+  },
+  {
+    "url": "http://localhost:3000/images/pic03.png",
+    "sm_url": "http://localhost:3000/images/s03.png",
+    "title": "TCL 75V2 75英寸AI超智慧巨幕4K电视",
+    "info": "TCL 75V2 75英寸大屏/95.9%屏占比/AI人工智能语音",
+    "price": "3889.00 元"
+  },
+  {
+    "url": "http://localhost:3000/images/pic04.png",
+    "sm_url": "http://localhost:3000/images/s02.png",
+    "title": "TCL 75V2 75英寸AI超智慧巨幕4K电视",
+    "info": "TCL 75V2 75英寸大屏/95.9%屏占比/AI人工智能语音",
+    "price": "3699.00 元"
+  },
+  {
+    "url": "http://localhost:3000/images/pic05.png",
+    "sm_url": "http://localhost:3000/images/s02.png",
+    "title": "TCL 75V2 75英寸AI超智慧巨幕4K电视",
+    "info": "TCL 75V2 75英寸大屏/95.9%屏占比/AI人工智能语音",
+    "price": "4399.00 元"
+  },
+  {
+    "url": "http://localhost:3000/images/pic06.jpg",
+    "sm_url": "http://localhost:3000/images/s03.png",
+    "title": "TCL 75V2 75英寸AI超智慧巨幕4K电视",
+    "info": "TCL 75V2 75英寸大屏/95.9%屏占比/AI人工智能语音",
+    "price": "3999.00 元"
+  }
+]

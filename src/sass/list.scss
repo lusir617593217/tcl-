@@ -371,37 +371,25 @@ ul, ol, li{
     height: 80px;
     margin: 0 auto;
     margin-bottom: 50px;
-    .paging-r{
+    #pageGro{
       float: right;
-      li{
-        display: inline-block;
-        font-size: 14px;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        margin: 0 7px;
-        padding: 0;
-        text-align: center;
-        cursor: pointer;
-        &:first-child, &:last-child{
-          font-weight: 300;
-          background: #e3e3e3;
-          color: #999;
-          &:hover{
-            a{
-              color: #999;
-            }
-            background: #e3e3e3;
-          }
-        }
-        &.active, &:hover{
-          background: red;
-          a{
-            color: #fff;
-          }
+      width: 24%;
+      padding-top: 0;
+     .pageUp, .pageDown{
+      width: 46px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 14px;
+     }
+      ul{
+        li{
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          font-size: 14px;
         }
       }
-
+      
     }
   }
 }

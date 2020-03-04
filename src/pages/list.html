@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../lib/pagination/pagination.css">
   <link rel="stylesheet" href="../sass/list.css">
 </head>
 
@@ -61,107 +62,27 @@
     </div>
     <div class="price">
       <b>价格</b>
-      <input type="text" placeholder="￥">
+      <input class="low" type="text" placeholder="￥">
       -
-      <input type="text" placeholder="￥">
-      <button>确定</button>
+      <input class="hight" type="text" placeholder="￥">
+      <button class="space">确定</button>
     </div>
     <div class="sort">
       <a href="#">综合排序</a>
       <a href="#">销量  ↑</a>
-      <a href="#">价格  ↑</a>
+      <a class="ascending" href="script:void(0)">价格  ↑</a>
     </div>
     <!-- 商品列表 -->
-    <ul class="list-box">
-      <li>
-        <div class="pic">
-          <img src="http://img.mall.tcl.com/dev1/0/000/730/0000730465.fid" alt="">
-        </div>
-        <div class="text">
-          <strong>
-            43英寸全场景
-            <span style="color:red">AI</span>
-            电视
-          </strong>
-          <p>
-            TCL 43D10 43英寸全场景
-            <span style="color:red">AI</span>
-            电视，无边款全面屏，远场语音，Q引擎画质，健康护眼，四维场景优化，精锐色域控制，2GB+8GB
-          </p>
-          <b>2399元</b>
-          <button>立即购买</button>
-        </div>
-      </li>
-      <li>
-        <div class="pic">
-          <img src="http://img.mall.tcl.com/dev1/0/000/730/0000730465.fid" alt="">
-        </div>
-        <div class="text">
-          <strong>
-            43英寸全场景
-            <span style="color:red">AI</span>
-            电视
-          </strong>
-          <p>
-            TCL 43D10 43英寸全场景
-            <span style="color:red">AI</span>
-            电视，无边款全面屏，远场语音，Q引擎画质，健康护眼，四维场景优化，精锐色域控制，2GB+8GB
-          </p>
-          <b>2399元</b>
-          <button>立即购买</button>
-        </div>
-      </li>
-      <li>
-        <div class="pic">
-          <img src="http://img.mall.tcl.com/dev1/0/000/730/0000730465.fid" alt="">
-        </div>
-        <div class="text">
-          <strong>
-            43英寸全场景
-            <span style="color:red">AI</span>
-            电视
-          </strong>
-          <p>
-            TCL 43D10 43英寸全场景
-            <span style="color:red">AI</span>
-            电视，无边款全面屏，远场语音，Q引擎画质，健康护眼，四维场景优化，精锐色域控制，2GB+8GB
-          </p>
-          <b>2399元</b>
-          <button>立即购买</button>
-        </div>
-      </li>
-      <li>
-        <div class="pic">
-          <img src="http://img.mall.tcl.com/dev1/0/000/730/0000730465.fid" alt="">
-        </div>
-        <div class="text">
-          <strong>
-            43英寸全场景
-            <span style="color:red">AI</span>
-            电视
-          </strong>
-          <p>
-            TCL 43D10 43英寸全场景
-            <span style="color:red">AI</span>
-            电视，无边款全面屏，远场语音，Q引擎画质，健康护眼，四维场景优化，精锐色域控制，2GB+8GB
-          </p>
-          <b>2399元</b>
-          <button>立即购买</button>
-        </div>
-      </li>
-    </ul>
+    <ul class="list-box"></ul>
     <!-- 分页 -->
     <div class="paging">
-        <ul class="paging-r">
-          <li> <a href="#" class="prev">&lt;</a></li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">6</a></li>
-          <li><a href="#" class="next">&gt;</a></li>
-        </ul>
+      <div id="pageGro">
+        <div class="pageUp">上一页</div>
+        <div class="pageList">
+        <ul>...</ul>
+        </div>
+        <div class="pageDown">下一页</div>
+      </div>
     </div>
   </div>
  
@@ -260,6 +181,8 @@
 </body>
 <script src="../lib/jquery/dist/jquery.min.js"></script>
 <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../lib/pagination/pageGroup.js"></script>
+<!-- <script src="../lib/pagination/pagination.js"></script> -->
 <script src="../js/index.js"></script>
-
+<script src="../js/list.js"></script>
 </html>

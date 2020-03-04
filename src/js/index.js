@@ -46,7 +46,7 @@ function navList(){
               <img src="${item['list-img']}" alt="">
               <div class="info-text">
                 <p>${item['list-title']}</p>
-                <span>${item['list-price']}</span>
+                <span>${item['list-price'] + ".00 元"}</span>
               </div>
             </li>
             `
@@ -89,9 +89,7 @@ function navTop(){
         list.forEach(item => {
           str2 += `
           <li>
-            <a href="../pages/details.html">
-              <img src="${item.list_url}" alt="">
-            </a>
+            <img src="${item.list_url}" alt="">
             <p>${item.list_title}</p>
             <span>${item.list_price}</span>
           </li>
@@ -112,3 +110,59 @@ function navTop(){
     }
   })
 }
+
+// 渲染 television
+television();
+function television(){
+  var str = '';
+  $.ajax({
+    url: '../lib/television.json',
+    dataType: 'json',
+    success: function(res){
+      res.forEach(function(item){
+        str += `
+        <li>
+          <img class="pic" src="${item.url}" alt="">
+          <img class="sm" src="${item.sm_url}" alt="">
+          <p class="title">${item.title}</p>
+          <p class="dice">${item.info}</p>
+          <p class="price">${item.price}</p>
+        </li>
+      `
+      })
+      $('.main-right').html(str)
+    }
+  })
+}
+
+// 给 nav-hide 里的每一个 li 添加点击事件
+$('.nav-hide').on('click', 'li', function(){
+  var goods = {
+    'url': $(this).children('img').attr('src'),
+    'title': $(this).children('p').text(),
+    'price':  $(this).children('span').text()
+  }
+  localStorage.setItem('goods_info', JSON.stringify(goods))
+  window.location.href = '../pages/details.html'
+})
+// 给 info > ul 里的每一个 li 添加点击事件
+$('.info > ul').on('click', 'li', function(){
+  var goods = {
+    'url': $(this).children('img').attr('src'),
+    'title': $(this).children('div').children('p').text(),
+    'price':  $(this).children('div').children('span').text()
+  }
+  localStorage.setItem('goods_info',JSON.stringify(goods))
+  window.location.href = '../pages/details.html'
+})
+
+// 给 main-right 里面的 li 添加事件
+$('.main-right').on('click', 'li', function(){
+  var goods = {
+    'url': $(this).children('.pic').attr('src'),
+    'title': $(this).children('.title').text(),
+    'price':  $(this).children('.price').text()
+  }
+  localStorage.setItem('goods_info',JSON.stringify(goods))
+  window.location.href = '../pages/details.html'
+})
