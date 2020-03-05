@@ -1,0 +1,1 @@
+"use strict";var username=getCookie("login");if(username){var dom=$('<li style="color:#ccc;font-size:10px;margin-left:18px">用户：'.concat(username,"</li>"));$(".is_login").hide().parent().append(dom)}else $(".is_login").show();var cartData=JSON.parse(localStorage.getItem("cart"));$(".cartNum").text(cartData.length);

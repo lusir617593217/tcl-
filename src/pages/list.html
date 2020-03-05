@@ -29,9 +29,13 @@
             <p class="text">关注公众号<br>一键下单购买</p>
           </div>
         </li><b></b>
-        <li><a href="./cart.html">购物车（<span>0</span>）</a></li><b></b>
-        <li><a href="./register.html">注册</a></li><b></b>
-        <li><a href="./login.html">登录</a></li>
+        <li>
+          <a href="./cart.html">购物车（
+          <span class="cartNum">0</span>
+          ）</a>
+        </li><b></b>
+        <li class="is_login"><a href="./register.html">注册</a></li><b></b>
+        <li class="is_login"><a href="./login.html">登录</a></li>
       </ul>
     </div>
   </div>
@@ -73,7 +77,28 @@
       <a class="ascending" href="script:void(0)">价格  ↑</a>
     </div>
     <!-- 商品列表 -->
-    <ul class="list-box"></ul>
+    <ul class="list-box">
+
+      <!-- <li>
+        <div class="pic">
+          <img src="${item.url}" alt="">
+        </div>
+        <div class="text">
+          <strong>
+            ${item.title}
+            <span style="color:red">AI</span>
+            电视
+          </strong>
+          <p>
+            ${item.info}
+            <span style="color:red">AI</span>
+            电视，无边款全面屏，远场语音，Q引擎画质，健康护眼，四维场景优化，精锐色域控制，2GB+8GB
+          </p>
+          <b>${item.price}</b>
+          <button>立即购买</button>
+        </div>
+      </!--> -->
+    </ul>
     <!-- 分页 -->
     <div class="paging">
       <div id="pageGro">
@@ -182,7 +207,8 @@
 <script src="../lib/jquery/dist/jquery.min.js"></script>
 <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../lib/pagination/pageGroup.js"></script>
-<!-- <script src="../lib/pagination/pagination.js"></script> -->
 <script src="../js/index.js"></script>
 <script src="../js/list.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../js/head.js"></script>
 </html>

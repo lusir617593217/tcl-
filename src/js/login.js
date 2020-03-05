@@ -46,8 +46,8 @@ $('.btn').click(function(e){
     dataType: 'json',
     data: `username=${username}&password=${password}`,
     success: function(res){
-      console.log(res)
       if(res.code === 1){
+        setCookie('login', username, 1*60*60*24); // 一天免登陆
         window.location.href = "../pages/index.html";
       }else{
         $('.err').show()

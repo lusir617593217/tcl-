@@ -104,6 +104,17 @@ $('.space').click(function(){
   bindList(1);
 })
 
+// 给 list-box 里面的每一个 li 添加事件
+$('.list-box').on("click", "li", function(){
+  var goods = {
+    'url': $(this).children('.pic').children().attr('src'),
+    'title': $(this).children('.text').children("strong").text(),
+    'price':  $(this).children('.text').children('b').text()
+  }
+  localStorage.setItem('goods_info',JSON.stringify(goods))
+  window.location.href = '../pages/details.html'
+})
+
 
 
 
