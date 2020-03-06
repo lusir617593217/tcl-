@@ -30,7 +30,7 @@ function bindHtml(){
         ${(parseInt(item.price) * item.count).toFixed(2)} 元
         </span>
         <p class="font">
-          <i class="glyphicon glyphicon-star"></i>
+          <i class="glyphicon glyphicon-star collect"></i>
           <i class="glyphicon glyphicon-trash del"></i>
         </p>
       </li>
@@ -104,6 +104,11 @@ $('.product').on('click', '.add', function(){
   var add = (parseInt($(this).parent().prev().text()) * count).toFixed(2)
   $(this).parent().next().text(add + " 元")
   account()
+})
+
+// 收藏按钮
+$('.product').on('click', '.collect', function(){
+  $(this).toggleClass('active')
 })
 
 // 删除按钮

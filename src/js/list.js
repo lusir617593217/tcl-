@@ -91,7 +91,8 @@ $('.ascending').click(function(){
       return  parseInt(b.price) - parseInt(a.price);
     })
   }
-  bindList(1)
+  bindList(1);
+  icon_load(pageCount);  // 渲染分页器
 })
 
 // 按价格区间筛选
@@ -102,6 +103,7 @@ $('.space').click(function(){
     return parseInt(item.price) >= low && parseInt(item.price) <= hight
   })
   bindList(1);
+  icon_load(pageCount);  // 渲染分页器
 })
 
 // 给 list-box 里面的每一个 li 添加事件
